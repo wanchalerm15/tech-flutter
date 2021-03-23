@@ -3,7 +3,7 @@ class TransactionModel {
   double amount;
   DateTime date;
 
-  TransactionModel({this.title, this.amount}) {
-    this.date = DateTime.now();
+  TransactionModel({this.title, this.amount, this.date}) {
+    this.date = this.date ?? DateTime.now();
   }
 }

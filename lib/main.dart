@@ -1,4 +1,3 @@
-import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/routes/FormScreen.dart';
 import 'package:flutter_application_1/stores/TransactionStore.dart';
@@ -38,6 +37,12 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  @override
+  void initState() {
+    super.initState();
+    Provider.of<TransactionStore>(context, listen: false).initializeLoadData();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
